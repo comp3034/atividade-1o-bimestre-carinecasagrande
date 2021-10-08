@@ -5,6 +5,7 @@ import 'package:pixel_perfect/pixel_perfect.dart';
 
 import 'dieta/dieta.dart';
 import 'login/login.dart';
+import 'register/register.dart';
 import 'medidas/medidas.dart';
 // import 'home/home.dart';
 
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: MedidasScreen(),
+      home: RegisterScreen(),
     );
   }
 }

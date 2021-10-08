@@ -2,6 +2,7 @@ import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
+import 'package:intl/intl.dart';
 
 class MedidasScreen extends StatelessWidget {
   const MedidasScreen({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class MedidasScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
+    DateFormat dateFormat = DateFormat("dd/MM/yyyy");
     return Scaffold(
       appBar: AppBar(
         title: Text('Medidas'),
@@ -27,9 +29,9 @@ class MedidasScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: 8,
-              left: width * .3,
-              child: Text('atualizado em ${DateTime.now()}'),
+              bottom: 25,
+              right: width * .1,
+              child: Text('Última atualização em ${dateFormat.format(DateTime.now())}'),
             ),
             Positioned(
               right: 48,
@@ -112,7 +114,7 @@ class MedidasScreen extends StatelessWidget {
               child: Column(
                 children: [
                   MeasureLabelWidget(
-                    label: 'Gorura',
+                    label: 'Gordura',
                     value: '170',
                     measure: '',
                   ),
